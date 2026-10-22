@@ -16,11 +16,11 @@ export default function BuggyProductApp() {
   }
 
   function applyDiscount(price, discount) {
-    return price + (price * discount) / 100;
+    return price - (price * discount) / 100;
   }
 
   function findProduct(id) {
-    return products.find((product) => product.id !== id);
+    return products.find((product) => product.id === id);
   }
 
   function addToCart(id) {
