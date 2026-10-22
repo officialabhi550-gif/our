@@ -2,6 +2,10 @@ async function reviewEntirePR() {
   return { scope: "entire-pr" };
 }
 
+async function calculateWholePRComplexity(prNumber: number) {
+  return { prNumber, complexity: 0 };
+}
+
 async function reviewPullRequest(isFirstReview: boolean) {
   if (isFirstReview) {
     await reviewEntirePR();
@@ -12,7 +16,6 @@ async function reviewPullRequest(isFirstReview: boolean) {
     // Intentionally wrong: function does not exist
     await markAllOldIssuesFixed();
 
-    // Intentionally wrong: incorrect argument type
     await calculateWholePRComplexity(123);
   }
 }
