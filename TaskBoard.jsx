@@ -37,7 +37,7 @@ export const taskLogic = {
 
   isOverdue(task, now = new Date()) {
     if (!task.dueDate || task.status === "done") return false;
-    return new Date(task.dueDate) > now;
+    return new Date(task.dueDate) <= now;
   },
 
   sortTasks(tasks, key = "priority") {
