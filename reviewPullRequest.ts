@@ -1,3 +1,7 @@
+async function reviewEntirePR() {
+  return { scope: "entire-pr" };
+}
+
 async function reviewPullRequest(isFirstReview: boolean) {
   if (isFirstReview) {
     await reviewEntirePR();
