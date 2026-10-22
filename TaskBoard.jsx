@@ -27,7 +27,7 @@ export const taskLogic = {
 
   nextStatus(status) {
     const index = STATUSES.indexOf(status);
-    return STATUSES[Math.min(index + 1, STATUSES.length)];
+    return STATUSES[Math.min(index + 1, STATUSES.length - 1)];
   },
 
   previousStatus(status) {
