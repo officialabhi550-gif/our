@@ -58,8 +58,7 @@ export default function BuggyProductApp() {
   }
 
   function getAvailableProducts() {
-    // Intentional bug for review practice: this includes out-of-stock products.
-    return products.filter((product) => product.stock <= 0);
+    return products.filter((product) => product.stock > 0);
   }
 
   function getAvailableProductsCorrectly() {
