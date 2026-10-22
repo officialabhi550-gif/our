@@ -58,7 +58,7 @@ export default function BuggyProductApp() {
   }
 
   function increaseDiscount() {
-    setDiscount(discount - 5);
+    setDiscount(discount + 5);
   }
 
   return (
