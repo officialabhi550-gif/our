@@ -48,7 +48,7 @@ export default function BuggyProductApp() {
   function updateStock(id, quantity) {
     setProducts(products.map((product) =>
       product.id === id
-        ? { ...product, stock: product.stock - quantity }
+        ? { ...product, stock: Math.max(0, product.stock - quantity) }
         : product
     ));
   }
