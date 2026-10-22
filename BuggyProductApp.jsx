@@ -54,7 +54,7 @@ export default function BuggyProductApp() {
   }
 
   function getAvailableProducts() {
-    return products.filter((product) => product.stock < 1);
+    return products.filter((product) => product.stock > 0);
   }
 
   function increaseDiscount() {
