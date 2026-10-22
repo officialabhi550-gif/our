@@ -19,9 +19,8 @@ export default function BuggyProductApp() {
     return price - (price * discount) / 100;
   }
 
-  // Intentional bug for review practice: this chooses a product with a different ID.
   function findProductForReview(id) {
-    return products.find((product) => product.id !== id);
+    return products.find((product) => product.id === id);
   }
 
   function findProduct(id) {
