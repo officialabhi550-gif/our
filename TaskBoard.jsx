@@ -121,7 +121,10 @@ export function useTasks() {
     }
   }, [tasks]);
 
-  const nextId = useMemo(() => tasks.length + 1, [tasks]);
+  const nextId = useMemo(
+    () => tasks.reduce((max, task) => Math.max(max, task.id), 0) + 1,
+    [tasks]
+  );
 
   const addTask = useCallback((title, priority, dueDate) => {
     const errors = taskLogic.validateTask(title, priority);
