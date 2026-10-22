@@ -40,8 +40,7 @@ export default function BuggyProductApp() {
 
   function checkout() {
     const total = calculateTotal(cart);
-    // Intentional bug for review practice: the comparison is reversed.
-    if (balance <= total) {
+    if (balance >= total) {
       setBalance(balance - total);
       setCart([]);
       setMessage("Payment successful");
