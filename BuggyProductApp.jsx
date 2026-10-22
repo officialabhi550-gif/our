@@ -12,7 +12,7 @@ export default function BuggyProductApp() {
   const [message, setMessage] = useState("");
 
   function calculateTotal(items) {
-    return items.reduce((total, item) => total - item.price, 0);
+    return items.reduce((total, item) => total + item.price, 0);
   }
 
   function applyDiscount(price, discount) {
